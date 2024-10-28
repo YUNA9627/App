@@ -8,7 +8,7 @@ import UpdateArticle from './components/UpdateArticle';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
-import React, { Component, setState } from 'react'
+import React, { Component } from 'react'
 
 class App extends Component {
   constructor(props) {
