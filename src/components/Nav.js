@@ -18,7 +18,7 @@ export default class Nav extends Component {
     let data = this.props.data;
     data.forEach((item)=>{
       list.push(<li key={item.id}><a   
-        href="#"
+        href="/"
         onClick={(e)=>{
           e.preventDefault();
           this.props.onChangePage(item.id);
