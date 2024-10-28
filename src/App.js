@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   getArticles(){
-    let _title, _desc, _article = null;
+    let _article = null;
     if(this.state.mode === 'welcome'){
       let _data = this.state.welcome;
       _article = <Article data={_data} mode={this.state.mode}></Article>;
