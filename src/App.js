@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   getReadArticle(){
-    const idx = this.state.menus.findIndex(item=> item.id == this.state.selected_id);
+    const idx = this.state.menus.findIndex(item=> item.id === this.state.selected_id);
     let data = this.state.menus[idx];
     return data;
   }
@@ -74,7 +74,7 @@ class App extends Component {
 
       _article = <UpdateArticle data={_data} onsubmit={(_title, _desc)=>{
         let _menus = [...this.state.menus];
-        const idx = this.state.menus.findIndex(item=> item.id == this.state.selected_id);
+        const idx = this.state.menus.findIndex(item=> item.id === this.state.selected_id);
         _menus[idx] = {id:this.state.selected_id, title:_title, desc:_desc} // 해당 값 수정
         this.setState({
           menus:_menus,
@@ -90,7 +90,7 @@ class App extends Component {
 
       if(window.confirm('정말 삭제할까요?')){
         let _menus = [...this.state.menus];
-        const id = this.state.menus.findIndex(item=> item.id == this.state.selected_id);
+        const id = this.state.menus.findIndex(item=> item.id === this.state.selected_id);
         _menus.splice(id, 1);
         
         this.setState({
